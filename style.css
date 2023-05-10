@@ -1,0 +1,123 @@
+:root {
+    --background-color: rgb(30, 30, 30);
+    --font-color1: rgb(255, 255, 255);
+    --font-color2: rgb(169, 219, 250);
+    --accent-color1: rgb(50, 50, 50);
+    --accent-color2: rgb(40, 40, 40);
+    --variable-color: rgb(142, 117, 162);
+    --bool-color: rgb(193, 123, 65);
+
+    --font-weight: 100;
+    --logo-font-size: 25px;
+    --sidebar-font-size: 13px;
+    --heading-font-size: 100px;
+}
+
+body {
+    margin: 0px;
+    background-color: var(--background-color);
+    font-family: Menlo, Monaco, 'Courier New', monospace;
+}
+
+.current-page {
+    color: var(--variable-color);
+}
+
+.true {
+    color: var(--bool-color);
+}
+
+#logo {
+    width: 100%;
+    display: flex;
+    padding: 12px 12px 12px 20px;
+    background-color: var(--accent-color1);
+}    
+
+#logo a {
+    width: fit-content;
+    text-decoration: none;
+    color: var(--font-color1);
+    font-size: var(--logo-font-size);
+}
+
+#sidebar {
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    background-color: var(--accent-color2);
+    height: 100%;
+    width: 200px;
+    padding: 5px 0px 0px 0px;
+}
+
+#sidebar-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 100px;
+}
+
+#sidebar a {
+    width: 175px;
+    padding: 5px 5px 5px 20px;
+    color: var(--font-color1);
+    font-size: var(--sidebar-font-size);
+    text-decoration: none;
+
+}
+
+#sidebar a:hover {
+    background-color: var(--accent-color1);
+}
+
+#sidebar-arrow-left {
+    position: fixed;
+    display: none;
+    left: 200px;
+    top: 50px;
+}
+
+#sidebar-arrow-right {
+    position: fixed;
+    display: block;
+    left: 20px;
+    top: 50px;
+}
+
+#sidebar-arrow-left button {
+    background-color: transparent;
+    border: none;
+    color: var(--font-color1);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: var(--font-weight);
+    cursor: pointer;
+    margin: 5px 0px 0px 5px;
+    padding: 0px;
+}
+
+#sidebar-arrow-right button {
+    background-color: transparent;
+    border: none;
+    color: var(--font-color1);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: var(--font-weight);
+    cursor: pointer;
+    margin: 5px 0px 0px 0px;
+    padding: 0px;
+}
+
+.page-header {
+    display: flex;
+    margin: 200px 50px 50px 350px;
+}
+
+.page-header h1 {
+    color: var(--font-color1);
+    font-weight: var(--font-weight);
+    font-size: var(--heading-font-size);
+    margin: 0px;
+}
