@@ -72,7 +72,7 @@ function randomJoke() {
 
     let prevNum = -1;
     for (let i = 0; i < 25; i++) {
-        setTimeout(function() { // asynchronous function
+        setTimeout(function() {
             let num = Math.floor(Math.random() * jokes.size);
             while (prevNum === num) {
                 num = Math.floor(Math.random() * jokes.size);
@@ -93,9 +93,12 @@ function randomJoke() {
         document.getElementById("punchline").innerHTML = punchline;
     }, 5000);
 }
+// setTimeout() is an asynchronous function
 
 // when window is first loaded
 window.onload = function() {
-    randomJoke();
     sidebarState();
+    if (window.location.href.indexOf("index.html") > -1) {
+        randomJoke();
+    }
 }

@@ -170,3 +170,19 @@ body {
     border: none;
     cursor: pointer;
 }
+
+/* ========================= ABOUT.HTML ========================= */
+
+#about-paragraph {
+    display: flex;
+    margin: 50px 50px 50px 350px;
+}
+
+#about-paragraph p {
+    font-family: inherit;
+    color: var(--font-color1);
+    font-weight: var(--font-weight);
+    font-size: var(--paragraph-font-size);
+    margin: 0px 200px 0px 0px;
+    padding: 0px 0px 0px 10px; 
+}
