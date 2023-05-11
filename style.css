@@ -11,6 +11,7 @@
     --logo-font-size: 25px;
     --sidebar-font-size: 13px;
     --heading-font-size: 100px;
+    --paragraph-font-size: 25px;
 }
 
 body {
@@ -19,13 +20,7 @@ body {
     font-family: Menlo, Monaco, 'Courier New', monospace;
 }
 
-.current-page {
-    color: var(--variable-color);
-}
-
-.true {
-    color: var(--bool-color);
-}
+/* ========================= LOGO ========================= */
 
 #logo {
     width: 100%;
@@ -40,6 +35,8 @@ body {
     color: var(--font-color1);
     font-size: var(--logo-font-size);
 }
+
+/* ========================= SIDEBAR ========================= */
 
 #sidebar {
     display: none;
@@ -90,7 +87,7 @@ body {
     background-color: transparent;
     border: none;
     color: var(--font-color1);
-    text-decoration: none;
+    font-family: inherit;
     font-size: 30px;
     font-weight: var(--font-weight);
     cursor: pointer;
@@ -99,10 +96,11 @@ body {
 }
 
 #sidebar-arrow-right button {
+    font-family: Menlo, Monaco, 'Courier New', monospace;
     background-color: transparent;
     border: none;
     color: var(--font-color1);
-    text-decoration: none;
+    font-family: inherit;
     font-size: 30px;
     font-weight: var(--font-weight);
     cursor: pointer;
@@ -110,9 +108,19 @@ body {
     padding: 0px;
 }
 
+.current-page {
+    color: var(--variable-color);
+}
+
+.true {
+    color: var(--bool-color);
+}
+
+/* ========================= PAGE HEADERS ========================= */
+
 .page-header {
     display: flex;
-    margin: 200px 50px 50px 350px;
+    margin: 175px 50px 50px 350px;
 }
 
 .page-header h1 {
@@ -120,4 +128,45 @@ body {
     font-weight: var(--font-weight);
     font-size: var(--heading-font-size);
     margin: 0px;
+}
+
+/* ========================= INDEX.HTML ========================= */
+
+#index-paragraph {
+    display: flex;
+    margin: 50px 50px 50px 350px;
+}
+
+#index-paragraph p {
+    color: var(--font-color1);
+    font-weight: var(--font-weight);
+    font-size: var(--paragraph-font-size);
+    margin: 0px;
+    padding: 0px 0px 0px 10px; 
+}
+
+#joke-paragraph {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 50px 50px 350px;
+}
+
+#joke-paragraph p {
+    color: var(--font-color1);
+    font-weight: var(--font-weight);
+    font-size: var(--paragraph-font-size);
+    margin: 0px;
+    padding: 10px 0px 0px 10px; 
+}
+
+#joke-paragraph button {
+    color: var(--font-color1);
+    font-family: inherit;
+    font-weight: var(--font-weight);
+    font-size: var(--paragraph-font-size);
+    margin: 20px 0px 0px 10px;
+    padding: 5px; 
+    background-color: var(--accent-color1);
+    border: none;
+    cursor: pointer;
 }
