@@ -98,7 +98,7 @@ function randomJoke() {
 // when window is first loaded
 window.onload = function() {
     sidebarState();
-    if (window.location.href.indexOf("index.html") > -1) {
+    if (window.location.href.indexOf("index.html") > -1 || window.location.href.indexOf("") > -1) {
         randomJoke();
     }
 }
