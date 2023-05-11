@@ -64,6 +64,7 @@ function randomJoke() {
             jokes.forEach(function(value, key) {
                 if (count === num) {
                     joke = key;
+                    punchline = value;
                 }
                 count++;
             });
@@ -72,20 +73,23 @@ function randomJoke() {
             prevNum = num;
         }, i * 50);
     }
-
-    let randomNum = Math.floor(Math.random() * jokes.size);
-    jokes.forEach(function(value, key) {
-        if (count === randomNum) {
-            joke = key;
-            punchline = value;
-        }
-        count++;
-    });
-
-    document.getElementById("joke").innerHTML = joke;
     setTimeout(function() {
         document.getElementById("punchline").innerHTML = punchline;
     }, 5000);
+
+    // let randomNum = Math.floor(Math.random() * jokes.size);
+    // jokes.forEach(function(value, key) {
+    //     if (count === randomNum) {
+    //         joke = key;
+    //         punchline = value;
+    //     }
+    //     count++;
+    // });
+
+    // document.getElementById("joke").innerHTML = joke;
+    // setTimeout(function() {
+    //     document.getElementById("punchline").innerHTML = punchline;
+    // }, 5000);
 }
 
 // when window is first loaded
