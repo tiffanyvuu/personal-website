@@ -196,7 +196,7 @@ function randomJoke() {
 window.onload = function() {
     sidebarState();
     const currentURL = window.location.href;
-    if (currentURL === "https://tiffanyvuu.github.io/personal-website" || currentURL === "https://tiffanyvuu.github.io/personal-website/index.html") {
+    if (currentURL === "https://tiffanyvuu.github.io/personal-website/" || currentURL === "https://tiffanyvuu.github.io/personal-website/index.html") {
         randomJoke();
     }
 }
