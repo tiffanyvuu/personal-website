@@ -193,18 +193,18 @@ function randomJoke() {
     }, 5000);
 }
 
-// window.onload = function() {
-//     sidebarState();
-//     const currentURL = window.location.href;
-//     if (currentURL === "https://tiffanyvuu.github.io/personal-website" || currentURL === "https://tiffanyvuu.github.io/personal-website/index.html") {
-//         randomJoke();
-//     }
-// }
-
 window.onload = function() {
     sidebarState();
-    // only runs on home page
-    if (window.location.href.indexOf("index.html") > -1) {
+    const currentURL = window.location.href;
+    if (currentURL === "https://tiffanyvuu.github.io/personal-website" || currentURL === "https://tiffanyvuu.github.io/personal-website/index.html") {
         randomJoke();
     }
 }
+
+// window.onload = function() {
+//     sidebarState();
+//     // only runs on home page
+//     if (window.location.href.indexOf("index.html") > -1) {
+//         randomJoke();
+//     }
+// }
