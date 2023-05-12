@@ -11,9 +11,10 @@
     </head>
 
     <body>
+
         <!-- ========================= LOGO ========================= -->
 
-        <div id="logo">
+        <div class="logo">
             <a id="logo-link" href="index.html">tiffanyVuu;</a>
         </div>
 
@@ -21,10 +22,24 @@
 
         <div id="sidebar">
             <div id="sidebar-text">
-                <a href="index.html" onclick="sidebarState()"><span class="current-page">home</span> = <span class="true">true</span>;</a>
-                <a href="about.html" onclick="sidebarState()">about</a>
-                <a href="experience.html" onclick="sidebarState()">experience</a>
-                <a href="connect.html" onclick="sidebarState()">connect</a>
+                <div class="logo" id="logo-sidebar">
+                    <a id="logo-link" href="index.html">tiffanyVuu;</a>
+                </div>
+                <a class="sidebar-link" id="home-tab" href="index.html" onclick="sidebarState()"><span class="current-page">home</span>&nbsp;=&nbsp;<span class="true">true</span>;</a>
+                <a class="sidebar-link" id="about-tab" href="about.html" onclick="sidebarState()">about</a>
+                <div class="sidebar-link-multi">
+                    <a class="sidebar-link" id="experience-tab" href="experience.html" onclick="sidebarState()">experience</a>
+                    <button class="expand-arrow" id="experience-expand" onclick="expand(this.id)">&or;</button>
+                </div>
+                <a class="sidebar-link sidebar-sublink experience-sublink" id="publix-tab" href="publix.html">publix</a>
+                <div class="sidebar-link-multi">
+                    <a class="sidebar-link" id="projects-tab" href="projects.html" onclick="sidebarState()">projects</a>
+                    <button class="expand-arrow" id="projects-expand" onclick="expand(this.id)">&or;</button>
+                </div>
+                <a class="sidebar-link sidebar-sublink projects-sublink" id="minesweeper-tab" href="minesweeper.html">minesweeper</a>
+                <a class="sidebar-link sidebar-sublink projects-sublink" id="sudoku-tab" href="sudoku.html">sudoku</a>
+                <a class="sidebar-link sidebar-sublink projects-sublink" id="imgprocessing-tab" href="imgprocessing.html">image processing</a>
+                <a class="sidebar-link" id="connect-tab" href="connect.html" onclick="sidebarState()">connect</a>
             </div>
         </div>
 
@@ -55,8 +70,9 @@
             <div>
                 <p id="punchline"></p>      
             </div>
-            <div>
-                <button onclick="randomJoke()">Tell me another joke.</button>
+            <div id="generate-joke">
+                <button id="joke-button" onclick="randomJoke()">Tell me another joke.</button>
+                <p>* There is a 1% chance of generating the secret joke.</p>
             </div>
         </div>
 

@@ -14,7 +14,7 @@
     --paragraph-font-size: 25px;
 }
 
-body {
+html, body {
     margin: 0px;
     background-color: var(--background-color);
     font-family: Menlo, Monaco, 'Courier New', monospace;
@@ -22,14 +22,14 @@ body {
 
 /* ========================= LOGO ========================= */
 
-#logo {
+.logo {
     width: 100%;
     display: flex;
     padding: 12px 12px 12px 20px;
     background-color: var(--accent-color1);
 }    
 
-#logo a {
+.logo a {
     width: fit-content;
     text-decoration: none;
     color: var(--font-color1);
@@ -41,11 +41,12 @@ body {
 #sidebar {
     display: none;
     position: fixed;
+    top: 0;
     flex-direction: column;
     background-color: var(--accent-color2);
-    height: 100%;
+    height: 100vh;
     width: 200px;
-    padding: 5px 0px 0px 0px;
+    padding: 0;
 }
 
 #sidebar-text {
@@ -53,10 +54,15 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     width: 200px;
-    height: 100px;
+    height: auto;
 }
 
-#sidebar a {
+#logo-sidebar {
+    width: 168px;
+}
+
+.sidebar-link {
+    display: flex;
     width: 175px;
     padding: 5px 5px 5px 20px;
     color: var(--font-color1);
@@ -116,6 +122,44 @@ body {
     color: var(--bool-color);
 }
 
+/* .sidebar-sublink {
+    display: none;
+    width: 155px;
+    padding: 5px 5px 5px 40px;
+} */
+
+.experience-sublink {
+    display: none;
+    width: 155px;
+    padding: 5px 5px 5px 40px;
+}
+
+.projects-sublink {
+    display: none;
+    width: 155px;
+    padding: 5px 5px 5px 40px;
+}
+
+.sidebar-link-multi {
+    display: flex;
+}
+
+.sidebar-link-multi button {
+    color: var(--font-color1);
+    font-family: inherit;
+    font-weight: var(--font-weight);
+    font-size: var(--sidebar-font-size);
+    margin: 0;
+    padding: 5px; 
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#minesweeper-tab {
+    display: none;
+}
+
 /* ========================= PAGE HEADERS ========================= */
 
 .page-header {
@@ -169,6 +213,19 @@ body {
     background-color: var(--accent-color1);
     border: none;
     cursor: pointer;
+    pointer-events: auto;
+}
+
+#generate-joke {
+    display: flex;
+    flex-direction: row;
+}
+
+#generate-joke p {
+    line-height: auto;
+    font-size: 10px;
+    padding: 40px 0px 0px 10px;
+    vertical-align: bottom;
 }
 
 /* ========================= ABOUT.HTML ========================= */
@@ -185,4 +242,54 @@ body {
     font-size: var(--paragraph-font-size);
     margin: 0px 200px 0px 0px;
     padding: 0px 0px 0px 10px; 
+}
+
+#resume {
+    display: flex;
+    margin: 50px 50px 50px 350px;
+}
+
+#resume a {
+    font-family: inherit;
+    color: var(--font-color1);
+    font-weight: var(--font-weight);
+    font-size: var(--paragraph-font-size);
+    margin: 0px 200px 0px 0px;
+    padding: 0px 0px 0px 10px; 
+    text-decoration: none;
+}
+
+/* ========================= EXPERIENCE.HTML ========================= */
+
+
+
+/* ========================= PROJECTS.HTML ========================= */
+
+#project-links {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 50px 50px 350px;
+}
+
+#project-links a {
+    font-family: inherit;
+    color: var(--font-color1);
+    font-weight: var(--font-weight);
+    font-size: var(--paragraph-font-size);
+    margin: 0px 200px 0px 0px;
+    padding: 0px 0px 0px 10px; 
+    text-decoration: none;
+}
+
+/* ========================= CONNECT.HTML ========================= */
+
+#connect-links {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px 50px 50px 350px;
+}
+
+#connect-links img {
+    width: 100px;
+    height: 100px;
 }

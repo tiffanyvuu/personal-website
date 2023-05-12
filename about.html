@@ -14,7 +14,7 @@
 
         <!-- ========================= LOGO ========================= -->
 
-        <div id="logo">
+        <div class="logo">
             <a id="logo-link" href="index.html">tiffanyVuu;</a>
         </div>
 
@@ -22,10 +22,24 @@
 
         <div id="sidebar">
             <div id="sidebar-text">
-                <a href="index.html">home</a>
-                <a href="about.html"><span class="current-page">about</span> = <span class="true">true</span>;</a>
-                <a href="experience.html">experience</a>
-                <a href="connect.html">connect</a>
+                <div class="logo" id="logo-sidebar">
+                    <a id="logo-link" href="index.html">tiffanyVuu;</a>
+                </div>
+                <a class="sidebar-link" id="home-tab" href="index.html" onclick="sidebarState()">home</a>
+                <a class="sidebar-link" id="about-tab" href="about.html" onclick="sidebarState()"><span class="current-page">about</span>&nbsp;=&nbsp;<span class="true">true</span>;</a>
+                <div class="sidebar-link-multi">
+                    <a class="sidebar-link" id="experience-tab" href="experience.html" onclick="sidebarState()">experience</a>
+                    <button class="expand-arrow" id="experience-expand" onclick="expand(this.id)">&or;</button>
+                </div>
+                <a class="sidebar-link sidebar-sublink experience-sublink" id="publix-tab" href="publix.html">publix</a>
+                <div class="sidebar-link-multi">
+                    <a class="sidebar-link" id="projects-tab" href="projects.html" onclick="sidebarState()">projects</a>
+                    <button class="expand-arrow" id="projects-expand" onclick="expand(this.id)">&or;</button>
+                </div>
+                <a class="sidebar-link sidebar-sublink projects-sublink" id="minesweeper-tab" href="minesweeper.html">minesweeper</a>
+                <a class="sidebar-link sidebar-sublink projects-sublink" id="sudoku-tab" href="sudoku.html">sudoku</a>
+                <a class="sidebar-link sidebar-sublink projects-sublink" id="imgprocessing-tab" href="imgprocessing.html">image processing</a>
+                <a class="sidebar-link" id="connect-tab" href="connect.html" onclick="sidebarState()">connect</a>
             </div>
         </div>
 
@@ -47,13 +61,12 @@
 
         <div id="about-paragraph">
             <p>
-                Hi! My name is Tiffany Vuu. I was born and raised in St. Petersburg, Florida. Currently, I am a rising 
-                sophomore pursuing a Bachelor of Science in Computer Science at the University of Florida. My favorite 
-                part about Computer Science is that it is always evolving and I can always learn something new. My 
-                current interests lie in web and software development, but I have also been exploring game development
-                and artificial intelligence. Outside of school, you can find me trying out new foods, walking a 
-                beautiful nature trail, or catching up on sleep.
+                Hi! My name is Tiffany Vuu. I was born and raised in St. Petersburg, Florida. Currently, I am a rising sophomore pursuing a Bachelor of Science in Computer Science at the University of Florida. My favorite part about Computer Science is that it is always evolving and I can always learn something new. My current interests lie in web and software development, but I have also been exploring game development and artificial intelligence. Outside of school, you can find me trying out new foods, walking a beautiful nature trail, or catching up on sleep.
             </p>
+        </div>
+
+        <div id="resume">
+            <a href="files/VuuTiffanyResume.pdf" target="_blank">resume</a>
         </div>
         
         <script src="script.js" charset="UFT-8"></script>
