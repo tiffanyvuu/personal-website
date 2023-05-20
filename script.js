@@ -193,6 +193,21 @@ function randomJoke() {
     }, 5000);
 }
 
+/* ========================= MINE ========================= */
+
+function explode () {
+    document.getElementById("mine-img").style.display = "block";
+    if (window.matchMedia("(max-width: 940px)").matches) {
+        document.getElementById("mine-click").style.margin = "0px 0px 0px 335px";
+    }
+    else {
+        document.getElementById("mine-click").style.margin = "0px 0px 0px 530px";
+    }
+    setTimeout(function() {
+        alert("boom. you clicked a mine.");
+    }, 500);
+}
+
 window.onload = function() {
     sidebarState();
     const currentURL = window.location.href;

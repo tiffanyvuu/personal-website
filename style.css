@@ -1,30 +1,91 @@
 :root {
     --background-color: rgb(30, 30, 30);
-    --font-color1: rgb(255, 255, 255);
-    --font-color2: rgb(169, 219, 250);
     --accent-color1: rgb(50, 50, 50);
     --accent-color2: rgb(40, 40, 40);
+    --font-color1: rgb(255, 255, 255);
+    --font-color2: rgb(169, 219, 250);
     --variable-color: rgb(142, 117, 162);
     --bool-color: rgb(193, 123, 65);
 
     --font-weight: 100;
     --logo-font-size: 25px;
     --sidebar-font-size: 13px;
-    --heading-font-size: 100px;
+    --heading-font-size: 80px;
     --paragraph-font-size: 25px;
 }
 
-html, body {
-    margin: 0px;
+* {
+    /* outline: red 1px dotted; */
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px 0px 50px 0px;
     background-color: var(--background-color);
     font-family: Menlo, Monaco, 'Courier New', monospace;
 }
 
+/* ========================= CONTENT ========================= */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0;
+    margin-inline: auto;
+
+    color: var(--font-color1);
+    font-weight: var(--font-weight);
+    font-size: var(--paragraph-font-size);
+}
+
+.container div {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.container div div {
+    margin: 5vh 0px 0px 0px;
+}
+
+.container div p {
+    margin: 5vh 0px 0px 0px;
+}
+
+.container div h1 {
+    margin: 20vh 0px 0px 0px;
+    font-weight: var(--font-weight);
+    font-size: var(--heading-font-size);
+}
+
+.container div li {
+    margin: 0;
+    list-style: square;
+}
+
+.container div a {
+    margin: 5vh 0px 0px 0px;
+}
+
+@media (max-width: 940px) {
+    :root {
+        --heading-font-size: 50px;
+    }
+}
+
+/* @media (max-width: 400px) {
+    .container div h1 {
+        margin: 0vh 0px 0px 0px;
+    }
+} */
+
 /* ========================= LOGO ========================= */
 
 .logo {
-    width: 100%;
     display: flex;
+    max-width: 100%;
     padding: 12px 12px 12px 20px;
     background-color: var(--accent-color1);
 }    
@@ -44,31 +105,22 @@ html, body {
     top: 0;
     flex-direction: column;
     background-color: var(--accent-color2);
-    height: 100vh;
+    min-height: 100%;
     width: 200px;
     padding: 0;
 }
 
-#sidebar-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 200px;
-    height: auto;
-}
-
 #logo-sidebar {
-    width: 168px;
+    max-width: 100%;
 }
 
 .sidebar-link {
     display: flex;
-    width: 175px;
+    max-width: 100%;
     padding: 5px 5px 5px 20px;
     color: var(--font-color1);
     font-size: var(--sidebar-font-size);
     text-decoration: none;
-
 }
 
 #sidebar a:hover {
@@ -97,12 +149,11 @@ html, body {
     font-size: 30px;
     font-weight: var(--font-weight);
     cursor: pointer;
-    margin: 5px 0px 0px 5px;
+    margin: 0px 0px 0px 5px;
     padding: 0px;
 }
 
 #sidebar-arrow-right button {
-    font-family: Menlo, Monaco, 'Courier New', monospace;
     background-color: transparent;
     border: none;
     color: var(--font-color1);
@@ -110,7 +161,7 @@ html, body {
     font-size: 30px;
     font-weight: var(--font-weight);
     cursor: pointer;
-    margin: 5px 0px 0px 0px;
+    margin: 0;
     padding: 0px;
 }
 
@@ -122,26 +173,26 @@ html, body {
     color: var(--bool-color);
 }
 
-/* .sidebar-sublink {
-    display: none;
-    width: 155px;
-    padding: 5px 5px 5px 40px;
-} */
-
 .experience-sublink {
     display: none;
-    width: 155px;
+    max-width: 100%;
     padding: 5px 5px 5px 40px;
 }
 
 .projects-sublink {
     display: none;
-    width: 155px;
+    max-width: 100%;
     padding: 5px 5px 5px 40px;
 }
 
 .sidebar-link-multi {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sidebar-link-multi a {
+    width: 100%;
 }
 
 .sidebar-link-multi button {
@@ -156,97 +207,43 @@ html, body {
     cursor: pointer;
 }
 
-#minesweeper-tab {
-    display: none;
-}
-
-/* ========================= PAGE HEADERS ========================= */
-
-.page-header {
-    display: flex;
-    margin: 175px 50px 50px 350px;
-}
-
-.page-header h1 {
-    color: var(--font-color1);
-    font-weight: var(--font-weight);
-    font-size: var(--heading-font-size);
-    margin: 0px;
-}
-
 /* ========================= INDEX.HTML ========================= */
-
-#index-paragraph {
-    display: flex;
-    margin: 50px 50px 50px 350px;
-}
-
-#index-paragraph p {
-    color: var(--font-color1);
-    font-weight: var(--font-weight);
-    font-size: var(--paragraph-font-size);
-    margin: 0px;
-    padding: 0px 0px 0px 10px; 
-}
-
-#joke-paragraph {
-    display: flex;
-    flex-direction: column;
-    margin: 50px 50px 50px 350px;
-}
-
-#joke-paragraph p {
-    color: var(--font-color1);
-    font-weight: var(--font-weight);
-    font-size: var(--paragraph-font-size);
-    margin: 0px;
-    padding: 10px 0px 0px 10px; 
-}
-
-#joke-paragraph button {
-    color: var(--font-color1);
-    font-family: inherit;
-    font-weight: var(--font-weight);
-    font-size: var(--paragraph-font-size);
-    margin: 20px 0px 0px 10px;
-    padding: 5px; 
-    background-color: var(--accent-color1);
-    border: none;
-    cursor: pointer;
-    pointer-events: auto;
-}
 
 #generate-joke {
     display: flex;
     flex-direction: row;
+    gap: 1vh;
+    margin: 2vh 0px 0px 0px;
+}
+
+#punchline {
+    margin: 0.5vh 0px 0px 0px;
+    color: var(--font-color1);
+    font-weight: var(--font-weight);
+    font-size: var(--paragraph-font-size);
+}
+
+#generate-joke button {
+    color: var(--font-color1);
+    font-family: inherit;
+    font-weight: var(--font-weight);
+    font-size: var(--paragraph-font-size);
+    background-color: var(--accent-color1);
+    border: none;
+    cursor: pointer;
+    pointer-events: auto;
+    padding: 2px;
 }
 
 #generate-joke p {
-    line-height: auto;
     font-size: 10px;
-    padding: 40px 0px 0px 10px;
-    vertical-align: bottom;
 }
 
 /* ========================= ABOUT.HTML ========================= */
 
-#about-paragraph {
-    display: flex;
-    margin: 50px 50px 50px 350px;
-}
-
-#about-paragraph p {
-    font-family: inherit;
-    color: var(--font-color1);
-    font-weight: var(--font-weight);
-    font-size: var(--paragraph-font-size);
-    margin: 0px 200px 0px 0px;
-    padding: 0px 0px 0px 10px; 
-}
-
 #resume {
     display: flex;
-    margin: 50px 50px 50px 350px;
+    flex-direction: row;
 }
 
 #resume a {
@@ -254,39 +251,101 @@ html, body {
     color: var(--font-color1);
     font-weight: var(--font-weight);
     font-size: var(--paragraph-font-size);
-    margin: 0px 200px 0px 0px;
-    padding: 0px 0px 0px 10px; 
     text-decoration: none;
+    padding: 1vh;
+    background-color: var(--accent-color1);
+    max-width: fit-content;
 }
 
 /* ========================= EXPERIENCE.HTML ========================= */
 
 
 
+/* ========================= PUBLIX.HTML ========================= */
+
+
+
 /* ========================= PROJECTS.HTML ========================= */
 
-#project-links {
+
+
+/* ========================= PERSONALWEB.HTML ========================= */
+
+
+
+/* ========================= MINESWEEPER.HTML ========================= */
+
+#mine {
     display: flex;
-    flex-direction: column;
-    margin: 50px 50px 50px 350px;
+    flex-direction: row;
+    justify-content: left;
+    margin-inline: auto;
+    position: absolute;
+    margin-top: 20vh;
+    width: 60%;
+    top: 83px;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
-#project-links a {
-    font-family: inherit;
-    color: var(--font-color1);
-    font-weight: var(--font-weight);
-    font-size: var(--paragraph-font-size);
-    margin: 0px 200px 0px 0px;
-    padding: 0px 0px 0px 10px; 
-    text-decoration: none;
+#mine p {
+    font-size: 13px;
+    margin: 0px 0px 0px 545px;
+    width: 15px;
+    height: 16px;
+    cursor: pointer;
 }
+
+#mine img {
+    display: none;
+    width: 15px;
+    height: 16px;
+}
+
+@media screen and (max-width: 940px) {
+    #mine {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin-inline: auto;
+        position: absolute;
+        margin-top: 20vh;
+        width: 60%;
+        top: 73px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    
+    #mine p {
+        font-size: 5px;
+        margin: 0px 0px 0px 342px;
+        width: 7px;
+        height: 8px;
+        cursor: pointer;
+    }
+
+    #mine img {
+        display: none;
+        width: 7px;
+        height: 8px;
+    }
+}
+
+/* ========================= IMGPROCESSING.HTML ========================= */
+
+
+
+/* ========================= SUDOKU.HTML ========================= */
+
+
 
 /* ========================= CONNECT.HTML ========================= */
 
 #connect-links {
     display: flex;
-    justify-content: space-evenly;
-    margin: 50px 50px 50px 350px;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
 
 #connect-links img {

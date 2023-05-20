@@ -15,7 +15,7 @@
         <!-- ========================= LOGO ========================= -->
 
         <div class="logo">
-            <a id="logo-link" href="index.html">tiffanyVuu;</a>
+            <a id="logo-link" href="index.html">TiffanyVuu;</a>
         </div>
 
         <!-- ========================= SIDEBAR ========================= -->
@@ -23,7 +23,7 @@
         <div id="sidebar">
             <div id="sidebar-text">
                 <div class="logo" id="logo-sidebar">
-                    <a id="logo-link" href="index.html">tiffanyVuu;</a>
+                    <a id="logo-link" href="index.html">TiffanyVuu;</a>
                 </div>
                 <a class="sidebar-link" id="home-tab" href="index.html" onclick="sidebarState()">home</a>
                 <a class="sidebar-link" id="aobut-tab" href="about.html" onclick="sidebarState()">about</a>
@@ -36,9 +36,10 @@
                     <a class="sidebar-link" id="projects-tab" href="projects.html" onclick="sidebarState()"><span class="current-page">projects</span>&nbsp;=&nbsp;<span class="true">true</span>;</a>
                     <button class="expand-arrow" id="projects-expand" onclick="expand(this.id)">&or;</button>
                 </div>
+                <!-- <a class="sidebar-link sidebar-sublink projects-sublink" id="personalweb-tab" href="personalweb.html">personal website</a> -->
                 <a class="sidebar-link sidebar-sublink projects-sublink" id="minesweeper-tab" href="minesweeper.html">minesweeper</a>
-                <a class="sidebar-link sidebar-sublink projects-sublink" id="sudoku-tab" href="sudoku.html">sudoku</a>
                 <a class="sidebar-link sidebar-sublink projects-sublink" id="imgprocessing-tab" href="imgprocessing.html">image processing</a>
+                <a class="sidebar-link sidebar-sublink projects-sublink" id="sudoku-tab" href="sudoku.html">sudoku</a>
                 <a class="sidebar-link" id="connect-tab" href="connect.html" onclick="sidebarState()">connect</a>
             </div>
         </div>
@@ -51,12 +52,44 @@
             <button onclick="openSidebar()">&gt;</button>
         </div>
 
-        <!-- ========================= HEADER ========================= -->
-
-        <div class="page-header">
-            <h1>minesweeper;</h1>
+        <div id="mine">
+            <p id="mine-click" onclick="explode()">&nbsp;</p>
+            <img id="mine-img" src="files/mine.png" alt="mine">
         </div>
+        
+        <div class="container">
 
+            <!-- ========================= HEADER ========================= -->
+
+            <div class="page-header">
+                <h1>Minesweeper;</h1>
+            </div>
+
+            <!-- ========================= CONTENT ========================= -->
+
+            <div id="minesweeper-content">
+                <div>
+                    <li>C++</li>
+                    <li>Simple and Fast Multimedia Library (SFML)</li>
+                    <li>Game Development</li>
+                    <li>Object-Oriented Programming</li>
+                    <li>File I/O</li>
+                </div>
+
+                <p>
+                    Minesweeper is the second game I recreated. This was an independent project and my favorite I have done so far because it was very rewarding to see how much I had improved since coding my first game.
+                    <br><br>
+                    Starting the project was initially very daunting because there were a lot of components to the project. There were three main windows I needed to implement: the welcome window, the game window, and the leaderboard window. 
+                    <br><br>
+                    I started working on the welcome window. Starting with implementing the welcome screen helped ease me into using the SFML library. This made rendering the game window a lot easier. The game window was certainly the most complex component of the entire project. At this step in the project, I had to implement both the game mechanics and GUI. I had to make very important decisions in this step, which included how I was going to make the individual tiles and how I was going to store them. I utilized an object-oriented programming apporoach and made a class for the tiles and stored them inside of a vector. These decisions made it easy to set attributes for each tile and made it easy to access. The last screen I needed to implement was the leaderbord window. This part utilized file I/O to read and store time scores of players.
+                    <br><br>
+                    The biggest challenge of this project was implementing all the game mechanics. There were a lot of details of the game that needed to be implemented like taking in user input to reveal tiles or place a flag, recurssive tile revealing, and a timer. All of the details were very overwhelming at one point. To ease some of the frustration, I organized a list of tasks and tackled them one at a time. When it came to debugging, I kept a list of bugs that I found when testing my game, which made it a lot easier to keep track of and fix later.
+                    <br><br>
+                    Looking back at the first game I recreated, which was Sudoku, I saw a large improvement in my skills. Using SFML was just a matter of learning the syntax. The concepts used were very similar to the concepts of using the PyGame library from Sudoku. Recreating Minesweeper really strengthened my game development skills and overall programming skills.
+                </p>
+            </div>
+
+        </div>
         
         <script src="script.js" charset="UFT-8"></script>
 
