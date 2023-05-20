@@ -259,7 +259,10 @@ body {
 
 /* ========================= EXPERIENCE.HTML ========================= */
 
-
+#experience-pages a {
+    text-decoration: underline;
+    color: var(--font-color1);
+}
 
 /* ========================= PUBLIX.HTML ========================= */
 
@@ -267,7 +270,10 @@ body {
 
 /* ========================= PROJECTS.HTML ========================= */
 
-
+#project-pages a {
+    text-decoration: underline;
+    color: var(--font-color1);
+}
 
 /* ========================= PERSONALWEB.HTML ========================= */
 
